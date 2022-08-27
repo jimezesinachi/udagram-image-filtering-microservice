@@ -37,10 +37,14 @@ app.get('/filteredimage', async (req: express.Request, res: express.Response) =>
     res.status(400).send('A valid image URL is required!');
   }
 
-  const filtered_image = await filterImageFromURL(image_url);
+  try {
+    const filtered_image = await filterImageFromURL(image_url);
 
-  res.status(200).sendFile(filtered_image), () => {
-    deleteLocalFiles([ filtered_image ]);
+    res.status(200).sendFile(filtered_image), () => {
+      deleteLocalFiles([ filtered_image ]);
+    }
+  } catch (error) {
+    res.status(422).json({ message: 'Invalid file link! Please check and try again!'});
   }
 });
 
