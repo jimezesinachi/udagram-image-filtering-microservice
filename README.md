@@ -13,6 +13,8 @@ A basic Ionic client web application which consumes the RestAPI Backend. [Covere
 
 ### Elastic Beanstalk deployment endpoint
 
+****IMPORTANT NOTE: I added a simple authentication middleware. The Postman collection JSON file can be found at the root folder (I updated the default(starter code) one.)****
+
 <http://udagram-dev222.us-east-1.elasticbeanstalk.com/>
 
 Test image link 1: <http://udagram-dev222.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg>
